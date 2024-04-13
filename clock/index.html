@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <style>
     body {
       text-align: center;
@@ -12,10 +14,14 @@
     #clock {
       margin: 10px auto auto auto;
       width: 500px;
-      height: 500px;
-      resize: both;
       overflow: hidden;
       border: 1px solid lightgray;
+    }
+
+    #clock:before {
+      content: " ";
+      display: block;
+      padding-top: 100%;
     }
 
     .repo {
@@ -48,6 +54,13 @@
       }
     }
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#clock").resizable();
+    });
+  </script>
 </head>
 
 <body>
